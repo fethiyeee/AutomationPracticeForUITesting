@@ -1,5 +1,7 @@
 package AutomationPracticeForUITesting;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestCase4_LogOutUser {
     /*
     1. Launch browser
@@ -13,4 +15,6 @@ public class TestCase4_LogOutUser {
 9. Click 'Logout' button
 10. Verify that user is navigated to login page
      */
+
+
 }
