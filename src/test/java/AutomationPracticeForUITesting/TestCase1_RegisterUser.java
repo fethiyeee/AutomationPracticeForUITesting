@@ -1,6 +1,6 @@
 package AutomationPracticeForUITesting;
 
-public class Register_User {
+public class TestCase1_RegisterUser {
 
 
     /*
