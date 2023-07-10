@@ -23,7 +23,7 @@ public class ParametersBrowserClass {
     @BeforeMethod
 
     //her seferinde elle browser i degistirmemek icin methodumuza parametre olarak hepsini ekledik.
-    //eger herhangi bir parametre gonderilmezse default olarak chrom ile olustur dedik..
+    //eger herhangi bir parametre gonderilmezse default olarak chrome ile olustur dedik..
 
     @Parameters("browser")
     public void setUp(@Optional("chrome") String browser) {
