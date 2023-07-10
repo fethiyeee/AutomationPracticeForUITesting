@@ -62,8 +62,11 @@ public class TestCase1_RegisterUser extends ParametersBrowserClass {
 
         Faker faker_data=new Faker();
 
-        driver.findElement(By.xpath("//input[@name='name']")).sendKeys(faker_data.name().firstName());
-        driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys(faker_data.internet().emailAddress());
+        String name=faker_data.name().firstName();
+        String eMail=faker_data.internet().emailAddress();
+
+        driver.findElement(By.xpath("//input[@name='name']")).sendKeys(name);
+        driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys(eMail);
 
 //        7. Click 'Signup' button
 
@@ -76,9 +79,8 @@ public class TestCase1_RegisterUser extends ParametersBrowserClass {
 //        9. Fill details: Title, Name, Email, Password, Date of birth
 
         driver.findElement(By.id("uniform-id_gender2")).click();// Mrs. clicked.
-        driver.findElement(By.xpath("//input[@id='name']")).sendKeys(faker_data.name().fullName());
-        driver.findElement(By.xpath("//input[@id='email']")).sendKeys(faker_data.internet().emailAddress());
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(faker_data.internet().password());
+
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("password");
 
         Select selectDay=new Select(driver.findElement(By.xpath("//select[@id='days']")));
         selectDay.selectByValue("24");
@@ -91,6 +93,9 @@ public class TestCase1_RegisterUser extends ParametersBrowserClass {
         selectYear.selectByValue("1990");
 
 //        10. Select checkbox 'Sign up for our newsletter!'
+
+
+
 //        11. Select checkbox 'Receive special offers from our partners!'
 //        12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
 //        13. Click 'Create Account button'
