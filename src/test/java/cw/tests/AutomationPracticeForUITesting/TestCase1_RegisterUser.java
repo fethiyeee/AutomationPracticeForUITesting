@@ -55,11 +55,9 @@ public class TestCase1_RegisterUser extends TestBase {
 
 //        6. Enter name and email address
 
-        Faker faker_data = new Faker();
-
-        String name = faker_data.name().firstName();
-        String lastName = faker_data.name().lastName();
-        String eMail = faker_data.internet().emailAddress();
+       String name = "Fethiye";
+       String lastName = "Ay";
+       String eMail = "fay.23@gmail.com";
 
         driver.findElement(By.xpath("//input[@name='name']")).sendKeys(name);
         driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys(eMail);
@@ -137,11 +135,11 @@ public class TestCase1_RegisterUser extends TestBase {
 
 //        17. Click 'Delete Account' button
 
-        driver.findElement(By.xpath("//a[.=' Delete Account']")).click();
+     //   driver.findElement(By.xpath("//a[.=' Delete Account']")).click();
 
 //        18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
-        Assert.assertTrue(driver.findElement(By.xpath("//b[.='Account Deleted!']")).isDisplayed());//passed
+      //  Assert.assertTrue(driver.findElement(By.xpath("//b[.='Account Deleted!']")).isDisplayed());//passed
 
 
     }

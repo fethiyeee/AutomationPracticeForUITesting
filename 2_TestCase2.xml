@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"></listener>
+        <listener class-name="org.testng.reporters.TestHTMLReporter"></listener>
+    </listeners>
+
+    <test name="test1">
+        <classes>
+            <class name="cw.tests.AutomationPracticeForUITesting.TestCase1_RegisterUser"></class>
+        </classes>
+    </test>
+
+    <test name="testcase2">
+        <classes>
+            <class name="cw.tests.AutomationPracticeForUITesting.TestCase2_LogInUserWithCorrectEmailAndPassword">
+            </class>
+        </classes>
+    </test>
+    
+    
+    
+</suite>

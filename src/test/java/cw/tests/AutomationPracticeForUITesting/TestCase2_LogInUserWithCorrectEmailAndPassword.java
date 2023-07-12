@@ -1,9 +1,11 @@
 package cw.tests.AutomationPracticeForUITesting;
 
+import cw.pages.SauceDemoLogIn;
 import cw.utilities.Configuration_Reader;
 
 import cw.utilities.Driver1;
-import org.junit.Test;
+import org.testng.annotations.Test;
+
 
 public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
@@ -24,26 +26,48 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
      */
 
 
-
-
     @Test
-    public void test(){
+    public void test() {
 
 //        1. Launch browser
 //        2. Navigate to url 'http://automationexercise.com'
 
         Driver1.getDriver().get(Configuration_Reader.getProperty("automationexerciseUrl"));
 
-
 //        3. Verify that home page is visible successfully
+
+        SauceDemoLogIn demoLogIn = new SauceDemoLogIn();
+
+        demoLogIn.homePageIsVisible();//passed
+
 //        4. Click on 'Signup / Login' button
+
+        demoLogIn.signUpClick();
+
 //        5. Verify 'Login to your account' is visible
+
+        demoLogIn.logInToYourAccountIsVisible();
+
 //        6. Enter correct email address and password
+
+        demoLogIn.inputEmail("fay.23@gmail.com");
+        demoLogIn.inputPassword("password");
+
 //        7. Click 'login' button
+
+        demoLogIn.logInButtonClick();
+
 //        8. Verify that 'Logged in as username' is visible
+
+        demoLogIn.loggedAsUserNameIsVisible();//passed
+
 //        9. Click 'Delete Account' button
+
+       demoLogIn.deleteAccountButtonClick();
+
 //        10. Verify that 'ACCOUNT DELETED!' is visible
 
+       demoLogIn.accountDeletedTextIsVisible();//passed
 
 
     }
