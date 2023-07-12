@@ -2,13 +2,11 @@ package cw.tests.AutomationPracticeForUITesting;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.ParametersBrowserClass;
-import utilities.TestBase;
+import cw.utilities.TestBase;
 
 public class TestCase1_RegisterUser extends TestBase {
 
