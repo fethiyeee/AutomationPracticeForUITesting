@@ -1,9 +1,9 @@
 package cw.tests.AutomationPracticeForUITesting;
 
 import cw.utilities.Configuration_Reader;
-import cw.utilities.Driver;
+
 import cw.utilities.Driver1;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 

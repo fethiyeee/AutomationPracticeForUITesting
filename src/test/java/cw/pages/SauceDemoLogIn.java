@@ -7,7 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SauceDemoLogIn {
 
-
+    public SauceDemoLogIn() { PageFactory.initElements(Driver.getDriver(),this);
+    }
 
 
 }
