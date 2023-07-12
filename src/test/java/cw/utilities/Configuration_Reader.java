@@ -6,10 +6,6 @@ import java.io.IOException;
 import java.util.Properties;
 
 
-
-
-
-
 public class Configuration_Reader {
 
     public static Properties properties;   //Create Properties instance

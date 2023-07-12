@@ -1,5 +1,6 @@
 package cw.utilities;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +20,7 @@ public class Driver1 {
     // create getDriver method to create and initiate the driver instance
     public static WebDriver getDriver() {
         if (driver == null) {
-            switch (ConfigurationReader.getProperty("browser")) {
+            switch (Configuration_Reader.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
