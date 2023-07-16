@@ -65,48 +65,47 @@ public class TestPageTransactions extends TestPageDemoLogIn {
         select.selectByValue("1990");
     }
 
-    public void inputCompany(){
+    public void inputCompany() {
         companyArea.sendKeys(company);
     }
 
-    public void inputAdress1(){
+    public void inputAdress1() {
 
         adress1Area.sendKeys(adress1);
 
     }
 
-    public void inputAdress2(){
+    public void inputAdress2() {
 
         adress2Area.sendKeys(adress2);
 
     }
 
-    public void selectingCountry(){
+    public void selectingCountry() {
 
-        Select select=new Select(selectCountry);
+        Select select = new Select(selectCountry);
         select.selectByValue("Canada");
     }
 
-    public void inputState(){
+    public void inputState() {
         stateArea.sendKeys(state);
     }
 
-    public void inputCity(){
+    public void inputCity() {
         cityArea.sendKeys(city);
     }
 
-    public void inputZipCode(){
+    public void inputZipCode() {
         zipCodeArea.sendKeys(zipCode);
     }
 
-    public void inputMobilePhone(){
+    public void inputMobilePhone() {
         mobilePhoneArea.sendKeys(mobilePhone);
     }
 
-    public void accountCreatedMessageIsDisplay(){
+    public void accountCreatedMessageIsDisplay() {
         Assert.assertTrue(accountCreatedMessage.isDisplayed());
     }
-
 
 
     public void loggedAsUserNameIsVisible() {
@@ -121,7 +120,6 @@ public class TestPageTransactions extends TestPageDemoLogIn {
     public void accountDeletedMessageIsVisible() {
         Assert.assertTrue(accountDeletedMessage.isDisplayed());
     }
-
 
 
 }
