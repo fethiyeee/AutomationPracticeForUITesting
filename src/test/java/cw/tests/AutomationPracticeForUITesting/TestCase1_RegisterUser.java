@@ -61,7 +61,7 @@ public class TestCase1_RegisterUser {
 //        6. Enter name and email address
 
         obj.inputName();
-        obj.inputEmail();
+        obj.inputEmail1();
 
 //        7. Click 'Signup' button
 

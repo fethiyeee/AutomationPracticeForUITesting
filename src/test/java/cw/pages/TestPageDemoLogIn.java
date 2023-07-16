@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 public class TestPageDemoLogIn {
 
 
-    protected String name;
-    protected String lastName;
-    protected String eMail;
-    protected String password;
+    protected static String name="Fethiye";
+    protected static String lastName="Ay";
+    protected static String eMail="fay.23@gmail.com";
+    protected static String password="password";
 
 
 

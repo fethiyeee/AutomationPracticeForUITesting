@@ -34,6 +34,9 @@ public class TestPageTransactions extends TestPageDemoLogIn {
         eMailArea1.sendKeys(eMail);
     }
 
+    public void inputEmail1() {
+        eMailArea1.sendKeys(eMail);
+    }
     public void inputEmail() {
         eMailArea.sendKeys(eMail);
     }

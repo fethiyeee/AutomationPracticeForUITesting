@@ -11,8 +11,6 @@ import org.testng.annotations.Test;
 public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
 
-
-
     /*
 1. Launch browser
 2. Navigate to url 'http://automationexercise.com'
