@@ -1,9 +1,10 @@
 package cw.tests.AutomationPracticeForUITesting;
 
-import cw.pages.SauceDemoLogIn;
+import cw.pages.TestPageDemoLogIn;
+import cw.pages.TestPageTransactions;
 import cw.utilities.Configuration_Reader;
 
-import cw.utilities.Driver1;
+import cw.utilities.Driver;
 import org.testng.annotations.Test;
 
 
@@ -27,47 +28,49 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
 
     @Test
-    public void test() {
+    public void test2() {
 
 //        1. Launch browser
 //        2. Navigate to url 'http://automationexercise.com'
 
-        Driver1.getDriver().get(Configuration_Reader.getProperty("automationexerciseUrl"));
+        Driver.getDriver().get(Configuration_Reader.getProperty("automationexerciseUrl"));
 
 //        3. Verify that home page is visible successfully
 
-        SauceDemoLogIn demoLogIn = new SauceDemoLogIn();
+        TestPageTransactions obj=new TestPageTransactions();
 
-        demoLogIn.homePageIsVisible();//passed
+        obj.homePageIsVisible();//passed
+
+
 
 //        4. Click on 'Signup / Login' button
 
-        demoLogIn.signUp.click();
+        obj.signUp.click();
 
 //        5. Verify 'Login to your account' is visible
 
-        demoLogIn.logInToYourAccountIsVisible();
+        obj.logInToYourAccountIsVisible();
 
 //        6. Enter correct email address and password
 
-        demoLogIn.inputEmail("fay.23@gmail.com");
-        demoLogIn.inputPassword("password");
+        obj.inputEmail();
+        obj.inputPassword();
 
 //        7. Click 'login' button
 
-        demoLogIn.logInButton.click();
+        obj.logInButton.click();
 
 //        8. Verify that 'Logged in as username' is visible
 
-        demoLogIn.loggedAsUserNameIsVisible();//passed
+        obj.loggedAsUserNameIsVisible();//passed
 
 //        9. Click 'Delete Account' button
 
-       demoLogIn.deleteAccountButton.click();
+       obj.deleteAccountButton.click();
 
 //        10. Verify that 'ACCOUNT DELETED!' is visible
 
-       demoLogIn.accountDeletedTextIsVisible();//passed
+       obj.accountDeletedTextIsVisible();//passed
 
 
     }

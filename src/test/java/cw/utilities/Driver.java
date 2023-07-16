@@ -10,14 +10,14 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
-public class Driver1 {
-    // create a private static WebDriver object
+public class Driver {
+
     private static WebDriver driver;
 
-    private Driver1() { //constructor Driver
+    private Driver() {
     }
 
-    // create getDriver method to create and initiate the driver instance
+
     public static WebDriver getDriver() {
         if (driver == null) {
             switch (Configuration_Reader.getProperty("browser")) {
@@ -44,9 +44,8 @@ public class Driver1 {
         return driver;
     }
 
-    // create a closeDriver method to close the driver
+
     public static void closeDriver() {
-        //   quit the driver id it is pointing chromedriver, firefoxdriver....
         if (driver != null) {
             driver.quit();
             driver = null;

@@ -1,21 +1,20 @@
 package cw.tests.AutomationPracticeForUITesting;
 
-import com.github.javafaker.Faker;
-import cw.pages.SauceDemoLogIn;
+import cw.pages.TestPageDemoLogIn;
+import cw.pages.TestPageTransactions;
 import cw.utilities.Configuration_Reader;
-import cw.utilities.Driver1;
+import cw.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import cw.utilities.TestBase;
 
-public class TestCase1_RegisterUser extends SauceDemoLogIn {
+public class TestCase1_RegisterUser {
 
 
     /*
-    1. Launch browser
+1. Launch browser
 2. Navigate to url 'http://automationexercise.com'
 3. Verify that home page is visible successfully
 4. Click on 'Signup / Login' button
@@ -37,43 +36,45 @@ public class TestCase1_RegisterUser extends SauceDemoLogIn {
 
 
     @Test
-    public void test1(){
+    public void test1() {
 //        1. Launch browser (in der ParametersBrowserClass gemacht ✅)
 
 //        2. Navigate to url 'http://automationexercise.com'
 
-        Driver1.getDriver().get(Configuration_Reader.getProperty("automationexerciseUrl"));
+        Driver.getDriver().get(Configuration_Reader.getProperty("automationexerciseUrl"));
 
 //        3. Verify that home page is visible successfully
 
-        SauceDemoLogIn demoLogIn = new SauceDemoLogIn();
+        TestPageTransactions obj = new TestPageTransactions();
 
 //        3. Verify that home page is visible successfully
 
-        Assert.assertTrue(driver.findElement(By.xpath("//a[.=' Home']")).isDisplayed());//passed
-
+        obj.homePageIsVisible();
 //        4. Click on 'Signup / Login' button
 
-        driver.findElement(By.xpath("//a[.=' Signup / Login']")).click();
+        obj.signUp.click();
 
 //        5. Verify 'New User Signup!' is visible
+        obj.newUserSignedUpMessageIsVisible();
 
-        Assert.assertTrue(driver.findElement(By.xpath("//h2[.='New User Signup!']")).isDisplayed());//passed
 
 //        6. Enter name and email address
 
-
-        driver.findElement(By.xpath("//input[@name='name']")).sendKeys(name);
-        driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys(eMail);
+        obj.inputName();
+        obj.inputEmail();
 
 //        7. Click 'Signup' button
 
-        driver.findElement(By.xpath("//button[.='Signup']")).click();
+        obj.signUp1.click();
 
 //        8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
 
-        Assert.assertTrue(driver.findElement(By.xpath("//b[.='Enter Account Information']")).isDisplayed());//passed
+        obj.enterAccou8ntInformationMessageIsVisible();
 
+
+
+
+/*
 //        9. Fill details: Title, Name, Email, Password, Date of birth
 
         driver.findElement(By.id("uniform-id_gender2")).click();// Mrs. clicked.
@@ -139,12 +140,15 @@ public class TestCase1_RegisterUser extends SauceDemoLogIn {
 
 //        17. Click 'Delete Account' button
 
-     //   driver.findElement(By.xpath("//a[.=' Delete Account']")).click();
+        //   driver.findElement(By.xpath("//a[.=' Delete Account']")).click();
 
 //        18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
-      //  Assert.assertTrue(driver.findElement(By.xpath("//b[.='Account Deleted!']")).isDisplayed());//passed
+        //  Assert.assertTrue(driver.findElement(By.xpath("//b[.='Account Deleted!']")).isDisplayed());//passed
 
 
+    }
+
+ */
     }
 }
