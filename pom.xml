@@ -50,12 +50,7 @@
             <version>4.9.1</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.19</version>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
 </project>

@@ -8,6 +8,12 @@ import org.testng.Assert;
 
 public class SauceDemoLogIn {
 
+    static {
+        String name = "Fethiye";
+        String lastName = "Ay";
+        String eMail = "fay.23@gmail.com";
+    }
+
     public SauceDemoLogIn() {
         PageFactory.initElements(Driver1.getDriver(), this);
     }
@@ -43,9 +49,6 @@ public class SauceDemoLogIn {
         Assert.assertTrue(homePage.isDisplayed());
     }
 
-    public void signUpClick() {
-        signUp.click();
-    }
 
     public void logInToYourAccountIsVisible() {
         Assert.assertTrue(logInToYourAccount.isDisplayed());
@@ -59,17 +62,12 @@ public class SauceDemoLogIn {
         passwordArea.sendKeys(password);
     }
 
-    public void logInButtonClick() {
-        logInButton.click();
-    }
 
     public void loggedAsUserNameIsVisible() {
         Assert.assertTrue(loggedAsUserName.isDisplayed());
     }
 
-    public void deleteAccountButtonClick() {
-        deleteAccountButton.click();
-    }
+
 
     public void accountDeletedTextIsVisible() {
         Assert.assertTrue(accountDeletedText.isDisplayed());

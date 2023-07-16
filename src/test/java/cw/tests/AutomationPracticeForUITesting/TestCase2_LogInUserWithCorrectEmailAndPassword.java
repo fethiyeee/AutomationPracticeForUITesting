@@ -42,7 +42,7 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
 //        4. Click on 'Signup / Login' button
 
-        demoLogIn.signUpClick();
+        demoLogIn.signUp.click();
 
 //        5. Verify 'Login to your account' is visible
 
@@ -55,7 +55,7 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
 //        7. Click 'login' button
 
-        demoLogIn.logInButtonClick();
+        demoLogIn.logInButton.click();
 
 //        8. Verify that 'Logged in as username' is visible
 
@@ -63,7 +63,7 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
 //        9. Click 'Delete Account' button
 
-       demoLogIn.deleteAccountButtonClick();
+       demoLogIn.deleteAccountButton.click();
 
 //        10. Verify that 'ACCOUNT DELETED!' is visible
 

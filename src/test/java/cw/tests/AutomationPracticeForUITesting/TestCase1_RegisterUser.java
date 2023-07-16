@@ -1,6 +1,9 @@
 package cw.tests.AutomationPracticeForUITesting;
 
 import com.github.javafaker.Faker;
+import cw.pages.SauceDemoLogIn;
+import cw.utilities.Configuration_Reader;
+import cw.utilities.Driver1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -8,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import cw.utilities.TestBase;
 
-public class TestCase1_RegisterUser extends TestBase {
+public class TestCase1_RegisterUser extends SauceDemoLogIn {
 
 
     /*
@@ -34,12 +37,16 @@ public class TestCase1_RegisterUser extends TestBase {
 
 
     @Test
-    public void test() {
+    public void test1(){
 //        1. Launch browser (in der ParametersBrowserClass gemacht ✅)
 
 //        2. Navigate to url 'http://automationexercise.com'
 
-        driver.get("http://automationexercise.com");
+        Driver1.getDriver().get(Configuration_Reader.getProperty("automationexerciseUrl"));
+
+//        3. Verify that home page is visible successfully
+
+        SauceDemoLogIn demoLogIn = new SauceDemoLogIn();
 
 //        3. Verify that home page is visible successfully
 
@@ -55,9 +62,6 @@ public class TestCase1_RegisterUser extends TestBase {
 
 //        6. Enter name and email address
 
-       String name = "Fethiye";
-       String lastName = "Ay";
-       String eMail = "fay.23@gmail.com";
 
         driver.findElement(By.xpath("//input[@name='name']")).sendKeys(name);
         driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys(eMail);
