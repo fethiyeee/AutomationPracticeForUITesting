@@ -17,8 +17,8 @@ public class TestPageTransactions extends TestPageDemoLogIn {
         Assert.assertTrue(homePage.isDisplayed());
     }
 
-    public void newUserSignedUpMessageIsVisible() {
-        Assert.assertTrue(newUserSignedUpMessage.isDisplayed());
+    public void newUserSignUpMessageIsVisible() {
+        Assert.assertTrue(newUserSignUpMessage.isDisplayed());
     }
 
     public void logInToYourAccountIsVisible() {
@@ -103,6 +103,9 @@ public class TestPageTransactions extends TestPageDemoLogIn {
         mobilePhoneArea.sendKeys(mobilePhone);
     }
 
+    public void accountCreatedMessageIsDisplay(){
+        Assert.assertTrue(accountCreatedMessage.isDisplayed());
+    }
 
 
 
@@ -110,13 +113,13 @@ public class TestPageTransactions extends TestPageDemoLogIn {
         Assert.assertTrue(loggedAsUserName.isDisplayed());
     }
 
-    public void enterAccou8ntInformationMessageIsVisible() {
-        Assert.assertTrue(enterAccou8ntInformationMessage.isDisplayed());
+    public void enterAccountInformationMessageIsVisible() {
+        Assert.assertTrue(enterAccountInformationMessage.isDisplayed());
     }
 
 
-    public void accountDeletedTextIsVisible() {
-        Assert.assertTrue(accountDeletedText.isDisplayed());
+    public void accountDeletedMessageIsVisible() {
+        Assert.assertTrue(accountDeletedMessage.isDisplayed());
     }
 
 

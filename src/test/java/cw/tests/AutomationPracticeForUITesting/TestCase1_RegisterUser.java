@@ -37,8 +37,7 @@ public class TestCase1_RegisterUser {
 
     @Test
     public void test1() {
-//        1. Launch browser (in der ParametersBrowserClass gemacht ✅)
-
+//        1. Launch browser
 //        2. Navigate to url 'http://automationexercise.com'
 
         Driver.getDriver().get(Configuration_Reader.getProperty("automationexerciseUrl"));
@@ -55,7 +54,7 @@ public class TestCase1_RegisterUser {
         obj.signUp.click();
 
 //        5. Verify 'New User Signup!' is visible
-        obj.newUserSignedUpMessageIsVisible();
+        obj.newUserSignUpMessageIsVisible();
 
 
 //        6. Enter name and email address
@@ -69,7 +68,7 @@ public class TestCase1_RegisterUser {
 
 //        8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
 
-        obj.enterAccou8ntInformationMessageIsVisible();
+        obj.enterAccountInformationMessageIsVisible();
 
 
 //        9. Fill details: Title, Name, Email, Password, Date of birth
@@ -108,32 +107,27 @@ public class TestCase1_RegisterUser {
         obj.inputMobilePhone();
 
 
-
-
-
 //        13. Click 'Create Account button'
-        driver.findElement(By.xpath("//button[.='Create Account']")).click();
+        obj.creatAccountButton.click();
 
 //        14. Verify that 'ACCOUNT CREATED!' is visible
-
-        Assert.assertTrue(driver.findElement(By.xpath("//b[.='Account Created!']")).isDisplayed());//passed
+        obj.accountCreatedMessageIsDisplay();
 
 //        15. Click 'Continue' button
 
-        driver.findElement(By.linkText("Continue")).click();
+        obj.continueButton.click();
 
 //        16. Verify that 'Logged in as username' is visible
 
-        Assert.assertTrue(driver.findElement(By.xpath("(//b)[1]")).isDisplayed());//passed
+        obj.loggedAsUserNameIsVisible();//passed
 
 //        17. Click 'Delete Account' button
 
-        //   driver.findElement(By.xpath("//a[.=' Delete Account']")).click();
+       obj.deleteAccountButton.click();
 
 //        18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
-        //  Assert.assertTrue(driver.findElement(By.xpath("//b[.='Account Deleted!']")).isDisplayed());//passed
-
+        obj.accountDeletedMessageIsVisible();
 
     }
 }

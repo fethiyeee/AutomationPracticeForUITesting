@@ -68,7 +68,7 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
 //        10. Verify that 'ACCOUNT DELETED!' is visible
 
-       obj.accountDeletedTextIsVisible();//passed
+       obj.accountDeletedMessageIsVisible();//passed
 
 
     }
