@@ -72,55 +72,43 @@ public class TestCase1_RegisterUser {
         obj.enterAccou8ntInformationMessageIsVisible();
 
 
-
-
-/*
 //        9. Fill details: Title, Name, Email, Password, Date of birth
 
-        driver.findElement(By.id("uniform-id_gender2")).click();// Mrs. clicked.
+        obj.genderArea.click();// Mrs. clicked.
 
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("password");
+        obj.inputPassword();
 
-        Select selectDay = new Select(driver.findElement(By.xpath("//select[@id='days']")));
-        selectDay.selectByValue("24");
-
-        Select selectMonth = new Select(driver.findElement(By.xpath("//select[@id='months']")));
-        selectMonth.selectByValue("4");
-
-        Select selectYear = new Select(driver.findElement(By.xpath("//select[@id='years']")));
-
-        selectYear.selectByValue("1990");
+        obj.selectingDay();
+        obj.selectingMonth();
+        obj.selectingYear();
 
 //        10. Select checkbox 'Sign up for our newsletter!'
 
-        WebElement signUpCheckBox = driver.findElement(By.xpath("//input[@id='newsletter']"));
-        if (!signUpCheckBox.isSelected()) {
-            signUpCheckBox.click();
+        if (!obj.selectNewsLetter.isSelected()) {
+            obj.selectNewsLetter.click();
         }
 
 //        11. Select checkbox 'Receive special offers from our partners!'
 
-        WebElement specialOffersCheckBox = driver.findElement(By.xpath("//input[@id='optin']"));
-        if (!specialOffersCheckBox.isSelected()) {
-            specialOffersCheckBox.click();
+        if (!obj.selectSpecialOffers.isSelected()) {
+            obj.selectSpecialOffers.click();
         }
 
 //        12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
 
-        driver.findElement(By.xpath("//input[@id='first_name']")).sendKeys(name);
-        driver.findElement(By.xpath("//input[@id='last_name']")).sendKeys(lastName);
-        driver.findElement(By.xpath("//input[@id='company']")).sendKeys("Bayer Ag");
-        driver.findElement(By.xpath("//input[@id='address1']")).sendKeys("Bahnallee 12");
-        driver.findElement(By.xpath("//input[@id='address2']")).sendKeys("Bahnallee 14");
+        obj.inputFirstName();
+        obj.inputLastName();
+        obj.inputCompany();
+        obj.inputAdress1();
+        obj.inputAdress2();
+        obj.selectingCountry();
+        obj.inputState();
+        obj.inputCity();
+        obj.inputZipCode();
+        obj.inputMobilePhone();
 
 
-        Select selectCountry = new Select(driver.findElement(By.xpath("//select[@id='country']")));
-        selectCountry.selectByValue("Canada");
 
-        driver.findElement(By.xpath("//input[@id='state']")).sendKeys("married");
-        driver.findElement(By.xpath("//input[@id='city']")).sendKeys("koln");
-        driver.findElement(By.xpath("//input[@id='zipcode']")).sendKeys("12345");
-        driver.findElement(By.xpath("//input[@id='mobile_number']")).sendKeys("09038283");
 
 
 //        13. Click 'Create Account button'
@@ -147,8 +135,5 @@ public class TestCase1_RegisterUser {
         //  Assert.assertTrue(driver.findElement(By.xpath("//b[.='Account Deleted!']")).isDisplayed());//passed
 
 
-    }
-
- */
     }
 }
