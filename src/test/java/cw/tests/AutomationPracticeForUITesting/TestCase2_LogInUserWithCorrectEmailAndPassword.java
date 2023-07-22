@@ -26,7 +26,7 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
 
     @Test
-    public void test2() {
+    public void test2() throws InterruptedException {
 
 //        1. Launch browser
 //        2. Navigate to url 'http://automationexercise.com'
@@ -43,6 +43,7 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
 //        4. Click on 'Signup / Login' button
 
+        Thread.sleep(1000);
         obj.signUp.click();
 
 //        5. Verify 'Login to your account' is visible
@@ -52,6 +53,8 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 //        6. Enter correct email address and password
 
         obj.inputEmail();
+
+        Thread.sleep(1000);
         obj.inputPassword();
 
 //        7. Click 'login' button
@@ -70,6 +73,7 @@ public class TestCase2_LogInUserWithCorrectEmailAndPassword {
 
        obj.accountDeletedMessageIsVisible();//passed
 
+        Driver.closeDriver();
 
     }
 

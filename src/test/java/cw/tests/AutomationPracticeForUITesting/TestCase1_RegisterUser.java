@@ -36,7 +36,7 @@ public class TestCase1_RegisterUser {
 
 
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
 //        1. Launch browser
 //        2. Navigate to url 'http://automationexercise.com'
 
@@ -106,6 +106,8 @@ public class TestCase1_RegisterUser {
         obj.inputZipCode();
         obj.inputMobilePhone();
 
+        Thread.sleep(2000);
+
 
 //        13. Click 'Create Account button'
         obj.creatAccountButton.click();
@@ -123,11 +125,13 @@ public class TestCase1_RegisterUser {
 
 //        17. Click 'Delete Account' button
 
-       obj.deleteAccountButton.click();
+      // obj.deleteAccountButton.click();
 
 //        18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
-        obj.accountDeletedMessageIsVisible();
+      // obj.accountDeletedMessageIsVisible();
+
+        Driver.closeDriver();
 
     }
 }
